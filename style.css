@@ -1,0 +1,187 @@
+
+/*UNIVERSAL*/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --clr-bg-container:#f3d2c1;
+    --clr-bg-light-brown:#fef6e4;
+    --clr-headline:#001858;
+    --clr-paragraph:#172c66;
+    --clr-button:#f582ae;   
+}
+.container-fluid{
+    background: var(--clr-bg-light-brown);
+
+    p{
+         color:var(--clr-paragraph);
+    }
+    :is(h1,h2,h3,h4,h5,h6){
+        color: var(--clr-headline);
+        letter-spacing: 3px;
+    }
+}
+.img-fluid{
+    width: 100%;
+}
+#portrait{
+    box-shadow: 5px 5px 5px black;
+}
+.paragraph-container,
+.timeline,
+.quote-container,
+.Card_RizalWorks{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 5px 5px black;
+    line-height: 2rem;
+    padding: 1rem;
+    margin-block: 2rem;
+
+
+}
+
+/*CARD HERE*/
+.Card_RizalWorks{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3,  1fr);
+
+    .title{
+        grid-column: 1/4;
+        text-align: center;
+    }
+    .card_items{
+
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 10px 5px black;
+    backdrop-filter: blur(11.2px);
+    -webkit-backdrop-filter: blur(11.2px);
+    width: 95%;
+    margin-inline: auto;
+    height: auto;
+    transition: .4s;
+    padding: 1rem;
+    cursor: pointer;
+    p{
+            text-align: justify;
+    text-indent: 1.5rem;
+    }
+        img{
+            width: 100%;
+            height: 25rem;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+
+    .card_items:hover{
+        transform: scale(1.1);
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width:767px){
+    /*mobile layout*/
+    .Card_RizalWorks{
+        grid-template-columns: repeat(2, 1fr);
+
+        .title{
+            grid-column: 1/3;
+        }
+    }
+    .card_items{
+        height: auto;
+        text-align: center;
+    }
+    .carousel_image{
+
+        width: 75%;
+        border-radius:10px;
+
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image_Height{
+        height: 300px;
+    }
+    .profile-container{
+        margin-top: -10%;
+        text-align: center;
+    }
+   
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    /*Tablet layout*/
+    .Card_RizalWorks{
+        grid-template-columns: repeat(2, 1fr);
+
+        .title{
+            grid-column: 1/3;
+        }
+    }
+    .carousel_portraitportraitimage{
+        width: 75%;
+        border-radius:10px;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image_Height{
+        height: 400px;
+    }
+    .profile-container{
+        margin-top: -10%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+
+    .carousel_image{
+        width: 65%;
+        border-radius:10px;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image_Height{
+        height: 500px;
+    }
+    .profile-container{
+        margin-top: -10%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+
+    .carousel_image{
+        width: 72%;
+        border-radius:10px;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image_Height{
+        height: 600px;
+    }
+    .profile-container{
+        margin-top: -10%;
+        text-align: center;
+    }
+}

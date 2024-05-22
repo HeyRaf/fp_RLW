@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+
+	--clr-bg-light-brown:#fef6e4;
+	--clr-headline:#001858;
+	--clr-paragraph:#172c66;
+	--clr-button:#f582ae;
+}
+/*MOBILE FIRST APPROACH FIRST*/
+body{
+	background: var(--clr-bg-light-brown);
+}
+.Container_Header{
+	width: 96%;
+	margin-inline: auto;
+	background: red;
+	position: relative;
+
+	.img-fluid{
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+	.Profile_Container{
+		position: absolute;
+		margin-inline: auto;
+		background: blue;
+		text-align: center;
+		top: 10rem;
+	}
+}
+
+@media only screen and (max-width: 600px) and (){
+	body{
+		
+	}
+}
